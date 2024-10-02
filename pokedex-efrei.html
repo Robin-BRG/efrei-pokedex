@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pokedex-efrei.css">
+    <script src="pokedex-efrei.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Pokédex</title>
+</head>
+<body>
+    <h1>Pokédex</h1>
+    <div class="filters">
+        <input type="text" id="search-bar" placeholder="Rechercher un Pokémon par nom">
+        <button id="sort-button">Trier par numéro de Pokédex</button>
+        <div class="generation-filters">
+            <label><input type="checkbox" class="generation-filter" value="1" checked> Génération 1</label>
+            <label><input type="checkbox" class="generation-filter" value="2" checked> Génération 2</label>
+            <label><input type="checkbox" class="generation-filter" value="3" checked> Génération 3</label>
+            <label><input type="checkbox" class="generation-filter" value="4" checked> Génération 4</label>
+            <label><input type="checkbox" class="generation-filter" value="5" checked> Génération 5</label>
+            <label><input type="checkbox" class="generation-filter" value="6" checked> Génération 6</label>
+            <label><input type="checkbox" class="generation-filter" value="7" checked> Génération 7</label>
+            <label><input type="checkbox" class="generation-filter" value="8" checked> Génération 8</label>
+            <label><input type="checkbox" class="generation-filter" value="9" checked> Génération 9</label>
+        </div>
+        <div class="type-filters">
+            <label><input type="checkbox" class="type-filter" value="grass"> Herbe</label>
+            <label><input type="checkbox" class="type-filter" value="fire"> Feu</label>
+            <label><input type="checkbox" class="type-filter" value="water"> Eau</label>
+            <label><input type="checkbox" class="type-filter" value="bug"> Insecte</label>
+            <label><input type="checkbox" class="type-filter" value="normal"> Normal</label>
+            <label><input type="checkbox" class="type-filter" value="electric"> Électrique</label>
+            <label><input type="checkbox" class="type-filter" value="ground"> Sol</label>
+            <label><input type="checkbox" class="type-filter" value="fairy"> Fée</label>
+            <label><input type="checkbox" class="type-filter" value="fighting"> Combat</label>
+            <label><input type="checkbox" class="type-filter" value="psychic"> Psy</label>
+            <label><input type="checkbox" class="type-filter" value="rock"> Roche</label>
+            <label><input type="checkbox" class="type-filter" value="ghost"> Spectre</label>
+            <label><input type="checkbox" class="type-filter" value="ice"> Glace</label>
+            <label><input type="checkbox" class="type-filter" value="dragon"> Dragon</label>
+            <label><input type="checkbox" class="type-filter" value="dark"> Ténèbres</label>
+            <label><input type="checkbox" class="type-filter" value="steel"> Acier</label>
+            <label><input type="checkbox" class="type-filter" value="poison"> Poison</label>
+            <label><input type="checkbox" class="type-filter" value="flying"> Vol</label>
+        </div>
+    </div>
+    <div class="pokemon-container" id="pokemon-container">
+        <!-- Les cartes Pokémon seront ajoutées ici -->
+    </div>
+    <div class="pagination">
+        <button id="prev-page">Précédent</button>
+        <span id="page-number">1</span>
+        <button id="next-page">Suivant</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+h1 {
+    color: red;
+}
+
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-card {
+    position: relative; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 350px; 
+    height: 350px; 
+    color: white; 
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pokedex-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px; 
+    font-weight: bold;
+    color: white;
+}
+
+.shiny-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.pokemon-image {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pokemon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pokemon-name {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.pokemon-type-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.type-capsule {
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 0.9em;
+    text-transform: capitalize;
+}
+
+.pokemon-stats-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.pokemon-card.show-stats .pokemon-stats-overlay {
+    display: flex;
+}
+
+.stat-bar-container {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.stat-bar-label {
+    text-align: left;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.stat-bar {
+    position: relative;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.stat-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.stat-bar-fill.hp { background-color: #ff5959; }
+.stat-bar-fill.attack { background-color: #f5ac78; }
+.stat-bar-fill.defense { background-color: #fae078; }
+.stat-bar-fill.sp-attack { background-color: #9db7f5; }
+.stat-bar-fill.sp-defense { background-color: #a7db8d; }
+.stat-bar-fill.speed { background-color: #fa92b2; }
+
+.show-stats-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card.show-stats .show-stats-button {
+    transform: rotate(180deg);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.pagination span {
+    font-size: 1.2em;
+}
+
+/* Couleurs de base pour chaque type de Pokémon */
+.type-grass { background-color: #78C850; }
+.type-fire { background-color: #F08030; }
+.type-water { background-color: #6890F0; }
+.type-bug { background-color: #A8B820; }
+.type-normal { background-color: #A8A878; }
+.type-electric { background-color: #F8D030; }
+.type-ground { background-color: #E0C068; }
+.type-fairy { background-color: #EE99AC; }
+.type-fighting { background-color: #C03028; }
+.type-psychic { background-color: #F85888; }
+.type-rock { background-color: #B8A038; }
+.type-ghost { background-color: #705898; }
+.type-ice { background-color: #98D8D8; }
+.type-dragon { background-color: #7038F8; }
+.type-dark { background-color: #705848; }
+.type-steel { background-color: #B8B8D0; }
+.type-poison { background-color: #A040A0; }
+.type-flying { background-color: #A890F0; }
